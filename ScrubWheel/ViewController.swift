@@ -30,4 +30,8 @@ extension ViewController: ScrubWheelDelegate {
     func scrubWheel(_ wheel: ScrubWheel, startedAt location: CGPoint) {
         
     }
+    
+    func scrubWheelDidOpen(_ wheel: ScrubWheel) {
+        
+    }
 }
