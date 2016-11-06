@@ -25,16 +25,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX6-4X-rAd">
+                                <rect key="frame" x="166" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lOU-cZ-Kkw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="470-By-zsj"/>
+                            <constraint firstItem="FX6-4X-rAd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXq-Of-0Zd"/>
+                            <constraint firstItem="FX6-4X-rAd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="KHv-rG-hMx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lOU-cZ-Kkw" secondAttribute="bottom" id="Lul-fM-r6m"/>
                             <constraint firstItem="lOU-cZ-Kkw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W0u-D9-JkA"/>
                             <constraint firstAttribute="trailing" secondItem="lOU-cZ-Kkw" secondAttribute="trailing" id="y5R-mb-fdH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressLabel" destination="FX6-4X-rAd" id="8PV-Bd-cNG"/>
                         <outlet property="scrubWheel" destination="lOU-cZ-Kkw" id="PTb-EU-uaB"/>
                     </connections>
                 </viewController>

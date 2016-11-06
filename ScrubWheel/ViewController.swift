@@ -11,18 +11,19 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var scrubWheel: ScrubWheel!
+    @IBOutlet weak var progressLabel: UILabel!
+    
+    fileprivate var progress: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrubWheel.delegate = self
+        showProgress()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    fileprivate func showProgress() {
+        progressLabel.text = "\(Int(round(progress)))"
     }
-
-
 }
 
 extension ViewController: ScrubWheelDelegate {
@@ -31,7 +32,16 @@ extension ViewController: ScrubWheelDelegate {
         
     }
     
+    func scrubWheel(_ wheel: ScrubWheel, didAdvanceBy arcLength: CGFloat) {
+        progress += arcLength
+        showProgress()
+    }
+    
     func scrubWheelDidOpen(_ wheel: ScrubWheel) {
+        showProgress()
+    }
+    
+    func scrubWheelDidClose(_ wheel: ScrubWheel) {
         
     }
 }
